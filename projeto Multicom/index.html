@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projeto</title>
+
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+  background-image: url(MCL.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment:fixed;
+}
+.menu{
+    width: 100%;    
+    height: 50px;
+    background-color: #e8f4ff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.menu ul{
+    list-style: none;
+    position: relative;
+}
+.menu ul li{
+    width: 150px;
+    float: left;
+}
+.menu a{
+    padding: 16px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #e8f4ff;
+    text-align: center;
+    color: #2499ff;
+
+}
+.menu ul ul{
+    position: absolute;
+    visibility: hidden;
+}
+.menu ul li:hover ul{
+    visibility: visible;
+
+}
+.menu a:hover {
+    background-color: #0085ff;
+    color: #fff;
+}
+.menu ul ul li{
+    float: none;
+    border-bottom: solid 2px #2499ff;
+}
+
+label[for="bt_menu"]{
+    padding: 5px;
+    background-color: #0085ff;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+#bt_menu{
+    display: none;
+}
+label[for="bt_menu"]{
+    display: none;
+}
+@media(max-width: 800px){
+
+    label[for="bt_menu"]{
+    display: block;
+    }
+    #bt_menu:checked ~ .menu{
+        margin-left: 0;
+    }
+    
+    .menu{
+        margin-top: 5px;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+    
+    .menu ul li{
+        width: 100%;
+        float: none;
+    }
+    .menu ul ul{
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+    }
+    .menu ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+
+    }
+    .menu a:hover {
+    background-color: white;
+    color: #0085ff;
+    }
+    .menu a{
+    padding: 16px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #0085ff;
+    text-align: center;
+}
+    .menu ul ul li a{
+        background-color:#e8f4ff ;
+        color: #0085ff;
+    }body{
+  background-image: url(MCL.png);
+  background-repeat: no-repeat;
+  background-size: 720px 480px;
+  background-position: center center;
+  background-attachment:fixed;
+  
+}
+}
+
+</style>
+</head>
+
+<body>
+    
+    <input type="checkbox" id="bt_menu">
+    <label for="bt_menu">&#9776;</label>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Cadastros</a>
+                <ul>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="#">Clientes</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Baixas</a>
+                <ul>    
+                    <li><a href="baixas.html">Baixa</a></li>
+                </ul>   
+                
+            </li>
+            <li><a href="#">Mais</a>
+            <ul>
+                <li><a href="#">Alterar Cor</a></li>
+                <li><a href="#">Encerrar</a></li>
+            </ul>
+            </li>
+        </ul>
+
+    </nav>
+
+  
+</body>
+</html>
